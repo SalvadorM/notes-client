@@ -1,0 +1,21 @@
+/* Global */
+
+.middle {
+    width: 50%;
+    margin: auto;
+}
+
+.loading {
+    margin: auto;
+}
+
+
+/* CARD CSS*/
+
+.card-font {
+    font-size: 1.2em;
+}
+.card-footer {
+    padding: 0;
+    display: inline-block;
+}
