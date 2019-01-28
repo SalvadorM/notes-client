@@ -19,3 +19,18 @@
     padding: 0;
     display: inline-block;
 }
+
+/*Home*/
+.jumbo {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../images/showcase.jpg');
+    background-position: center;
+    position: absolute; 
+}
+
+.jumbotron {
+    width: 50%;
+    margin-top: 3rem;
+    background-color: rgba(144, 164, 174, 0.2);
+}
