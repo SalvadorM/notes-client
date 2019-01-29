@@ -1,5 +1,7 @@
 /* Global */
-
+body {
+    background-color: #ECEFF1;
+}
 .middle {
     width: 50%;
     margin: auto;
@@ -33,4 +35,57 @@
     width: 50%;
     margin-top: 3rem;
     background-color: rgba(144, 164, 174, 0.2);
+}
+.welcome-text {
+    color: white;
+}
+
+.welcome-title {
+    color: rgba(255,255,255,0.6)
+}
+
+/*Register*/
+
+.register {
+    background-image: linear-gradient(#607D8B,#CFD8DC);
+    height: 100vh;
+}
+
+.reg {
+    background-color:  #ECEFF1;
+
+}
+/*Login*/
+.login {
+    background-image: linear-gradient(#E3F2FD,#E0E0E0);
+    height: 100vh;
+}
+.log {
+    background-color: #ECEFF1;
+}
+/* User page */
+.page {
+    background-color: #ECEFF1;
+    height: 100%;
+}
+
+/* Card css */
+.card {
+    transition: all 500ms ease-in;
+}
+.card:hover {
+    border: 1px solid black;
+
+}
+.text-muted {
+    font-size: 10px;
+}
+
+.card-text {
+    font-size: 1.5rem;
+}
+
+/* Comment */
+.comment {
+    border-bottom: 1px solid black;
 }

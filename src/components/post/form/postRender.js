@@ -5,12 +5,13 @@ const RenderPost = (props) => {
     const username = props.username
 
     return(<div className="container w-75 mt-5">
-        <div className="border rounded border-dark text-center">
+        <div className="text-center">
         <div className="card-body">
+
             <h2>{note.title}</h2>
-            <hr className="hrstyle"></hr>
-            <p className="mt-2 card-font font-weight-light">{note.body}</p>
-            <p className="card-footer mt-2 text-muted">Upload by {username}</p>
+            <p className="text-muted">content:</p>
+            <p className="py-6 card-text font-weight-light">{note.body}</p>
+            <p className="card-footer mt-2 text-muted float-left">Upload by {username}</p>
         </div>
         </div>
     </div>)

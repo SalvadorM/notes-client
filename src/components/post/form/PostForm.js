@@ -50,6 +50,7 @@ class PostForm extends Component {
 
     
         return(
+            <div className="page">
             <div className="container middle text-center">
             <form className="form-group" name="post" onSubmit={ (e) => this.onSubmit(e)}>
             <div className="">
@@ -81,7 +82,9 @@ class PostForm extends Component {
                         cancel
                         </button>
             </form>
-            </div>)
+            </div>
+            </div>
+        )
     }
 }
 

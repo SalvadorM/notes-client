@@ -1,4 +1,5 @@
 import axios from 'axios'
+const URL_ = 'https://noteshare-app.herokuapp.com'
 
 export const searchPost = (path, keywords)  => {
 
@@ -11,7 +12,7 @@ export const searchPost = (path, keywords)  => {
     }
     
     const query = queryURL.toString()
-    let URL = 'https://noteshare-app.herokuapp.com/post/search/'+ path +'/keywords/?' + query
+    let URL = URL_ + '/post/search/' + path + '/keywords/?' + query
 
     return axios
         .get(URL)

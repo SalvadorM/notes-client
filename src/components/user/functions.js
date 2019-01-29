@@ -1,4 +1,5 @@
 import axios from 'axios'
+const URL_ = 'https://noteshare-app.herokuapp.com'
 
 /*
     Post reqest to api, to login in and user authentication 
@@ -8,22 +9,25 @@ export const userLogin = user => {
         username: user.username,
         password: user.password
     }
+    let URL =  URL_ + '/user/login'
     return axios
-        .post('https://noteshare-app.herokuapp.com/user/login', userSchema)
+        .post(URL, userSchema)
 }
 
 /*
     Post reqest to api, to log out user and end user session
 */
 export const userLogout = () => {
+    let URL =  URL_ + '/user/logout'
     return axios
-        .post('https://noteshare-app.herokuapp.com/user/logout')
+        .post(URL)
 }
 
 /*
     Post reqest to api, to register a new user and create account
 */
 export const userCreate = newUser => {
+    let URL =  URL_ + '/user/register'
     return axios
-    .post('https://noteshare-app.herokuapp.com/user/register', newUser)
+    .post(URL, newUser)
 }

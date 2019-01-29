@@ -129,7 +129,7 @@ class SignUp extends Component {
                             <div className="form-group col-md-6">
                             <input name="firstName" 
                                 type="text" 
-                                className="form-control"
+                                className="form-control reg"
                                 placeholder="John"
                                 required
                                 onChange = { (e) => this.onChange(e)}
@@ -139,7 +139,7 @@ class SignUp extends Component {
                             <div className="form-group col-md-6">
                             <input  name="lastName" 
                                     type="text" 
-                                    className="form-control" 
+                                    className="form-control reg" 
                                     placeholder="Doe"
                                     required
                                     onChange = { (e) => this.onChange(e)}
@@ -149,7 +149,7 @@ class SignUp extends Component {
                         </div>
                         <label>Enter a username</label>
                         <input name="username" 
-                            className="form-control" 
+                            className="form-control reg" 
                             id="username" 
                             type="text"
                             required
@@ -158,7 +158,7 @@ class SignUp extends Component {
 
                         <label>Enter email</label>
                         <input name="email" 
-                            className="form-control" 
+                            className="form-control reg" 
                             id="email" 
                             type="email"
                             required 
@@ -167,7 +167,7 @@ class SignUp extends Component {
         
                         <label>Password</label>
                         <input name="password" 
-                            className="form-control" 
+                            className="form-control reg" 
                             id="password" 
                             type="password"
                             required
@@ -176,7 +176,7 @@ class SignUp extends Component {
         
                         <label>Repeat Password</label>
                         <input name="password2" 
-                            className="form-control" 
+                            className="form-control reg" 
                             id="password2" 
                             required
                             type="password"

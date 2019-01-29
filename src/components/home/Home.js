@@ -12,9 +12,9 @@ class Home extends Component{
 
         let message = (           
             <div>
-            <h1 className="">Welcome to cause note</h1>
-           <Link className="btn btn-outline-primary mb-2 mr-2" to="/login">Login</Link> 
-           <Link className="btn btn-outline-secondary mb-2" to="/signup">Register</Link>
+            <h1 className="welcome-title">Welcome to cause note</h1>
+           <Link className="btn btn-outline-primary my-4 mr-2" to="/login">Login</Link> 
+           <Link className="btn btn-outline-info my-4" to="/register">Register</Link>
            </div>
           )
 
@@ -25,6 +25,9 @@ class Home extends Component{
             <div className='jumbo'>
                 <div className='container text-center jumbotron'>
                 {message}
+                <h5 className="mt-3 welcome-text">
+                    Welcome to CAUSEnotes, a one stop shop for CUNY students to freely share and view notes among students, for free. 
+                </h5>
                 </div>
             </div>
         )

@@ -1,10 +1,12 @@
 import axios from 'axios'
+const URL_ = 'https://noteshare-app.herokuapp.com'
+
 /*
     user FUNCTION
     GET reqest to api, to get note id 
 */
 export const getUserById = _id => {
-    let URL = 'https://noteshare-app.herokuapp.com/user/' + _id
+    let URL = URL_ + '/user/' + _id
     return axios
     .get(URL);
 }
@@ -14,7 +16,7 @@ export const getUserById = _id => {
     GET reqest to api, to get all notes from users
 */
 export const getAllUserPost = _id => {
-    let URL = 'https://noteshare-app.herokuapp.com/post/all/' + _id
+    let URL = URL_ + '/post/all/' + _id
     return axios
     .get(URL);
 }
@@ -24,16 +26,16 @@ export const getAllUserPost = _id => {
     GET reqest to api, to get the post by id
 */
 export const getPostById = _id => {
-    let URL = 'https://noteshare-app.herokuapp.com/post/' + _id
+    let URL = URL_ + '/post/' + _id
     return axios
     .get(URL);
 }
 
 export const createPost = newPost => {
     axios.defaults.withCredentials = true
-
+    let URL =  URL_ + '/post/new'
     return axios
-    .post('https://noteshare-app.herokuapp.com/post/new', newPost)
+    .post(URL, newPost)
 }
 
 /*
@@ -41,7 +43,7 @@ export const createPost = newPost => {
     GET reqest to api, to get all comments from post
 */
 export const getAllPostComments = postId => {
-    let URL = 'https://noteshare-app.herokuapp.com/comment/postall/' + postId
+    let URL =  URL_ + '/comment/postall/' + postId
     return axios  
     .get(URL)
 }
@@ -53,5 +55,5 @@ export const postCommment = (newComment) => {
     axios.defaults.withCredentials = true
 
     return axios  
-    .post('https://noteshare-app.herokuapp.com/comment/new/', newComment)
+    .post('http://localhost:8000/comment/new/', newComment)
 }

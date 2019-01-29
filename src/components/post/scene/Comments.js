@@ -36,7 +36,7 @@ class Comments extends Component {
         const postId = this.props.postId
         const {comments} = this.state
         return(
-        <div className="container">
+        <div className="container py-5 middle">
             <div><CommentForm postId={postId} action={this.newComment} /></div>
             <div><PostComments postId={postId} comments={comments} /></div>
         </div>)

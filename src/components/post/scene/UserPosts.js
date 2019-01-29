@@ -36,12 +36,14 @@ class UserPosts extends Component{
         let {name, id, cbResponce} = this.state
         if(cbResponce){
             return(
-                <div className="container text-center"> 
-                    <h1 className="my-3">hello {name}</h1>
+                <div className="page">
+                 <div className="container text-center"> 
+                    <h1 className="py-3">hello {name}</h1>
+                    <p>Below are all your notes, you submitted</p>
                     <NoteButton/>
                     <AllPost userId={id}/>
                 </div>
-         
+                </div>
             )
         }
 

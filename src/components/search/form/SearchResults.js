@@ -15,7 +15,7 @@ class SearchResults extends Component{
         }
 
         return(
-            <div className="container text-center mt-4">
+            <div className="container text-center pt-4">
                 {allResults}
             </div>
         )
