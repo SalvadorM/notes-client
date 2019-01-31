@@ -1,5 +1,6 @@
 import axios from 'axios'
-const URL_ = 'https://noteshare-app.herokuapp.com'
+const URL_test = 'https://noteshare-app.herokuapp.com'
+const URL_ = 'http://localhost:8000'
 
 export const searchPost = (path, keywords)  => {
 
@@ -18,3 +19,10 @@ export const searchPost = (path, keywords)  => {
         .get(URL)
         
 }   
+
+export const searchUsername = (searchQuery) => {
+    let URL = URL_ + '/user/find/?value=' + searchQuery
+
+    return axios 
+        .get(URL)
+}

@@ -14,6 +14,7 @@ import UserPosts from './components/post/scene/UserPosts'
 import PostForm from './components/post/form/PostForm'
 import NoteHub from './components/note/scene/Note'
 import Search from './components/search/scene/Search'
+import Username from './components/post/scene/Username'
 
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
             <PrivateRoute exact path="/post/new" component={PostForm}/>
             <PrivateRoute exact path="/notes/" component={NoteHub}/>
             <PrivateRoute exact path="/user" component={UserPosts}/>
+            <PrivateRoute exact path="/username/:value" component={Username}/>
             <PrivateRoute exact path="/post/:id" component={Post}/>
         </Switch>
       </div>

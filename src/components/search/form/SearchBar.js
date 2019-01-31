@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import {searchPost} from '../functions'
+import {searchPost, searchUsername} from '../functions'
+
 
 class SearchBar extends Component{
     constructor(props){
@@ -30,6 +31,17 @@ class SearchBar extends Component{
         e.preventDefault()
         let {query} = this.state
         let path = this.state.searchValue
+        if(path === 'username') {
+            //go to username route 
+            searchUsername(query)
+                .then(results => {
+                    this.setState({
+                        query: '',
+                        searchValue: 'title',
+                    })
+                    this.props.action(null, results.data)
+                })
+        }
         let wordSpread = query.split(" ")
 
         let keywords = {}
@@ -71,6 +83,7 @@ class SearchBar extends Component{
 
                         <option value="title">title</option>
                         <option value="body">body</option>
+                        <option value="username">username</option>
                         </select>
                     </div>
 
