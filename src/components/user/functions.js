@@ -1,6 +1,6 @@
 import axios from 'axios'
-const URL_test = 'https://noteshare-app.herokuapp.com'
-const URL_ = 'http://localhost:8000'
+const URL_ = 'https://noteshare-app.herokuapp.com'
+const URL_test= 'http://localhost:8000'
 
 /*
     Post reqest to api, to login in and user authentication 

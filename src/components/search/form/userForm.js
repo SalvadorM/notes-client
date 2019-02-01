@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const UserView = (props) => {
     const user = props.user
-    const URL = '/username/' + user.username
+    const URL = '/username/' + user.id
 
     let date =  user.updatedAt.substr(0,10);
 

@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom'
 
 
 const Greetings = (props) => {
-    console.log(props)
     let name = props.username
     return(
         <div>

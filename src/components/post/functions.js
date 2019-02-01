@@ -1,6 +1,6 @@
 import axios from 'axios'
-const URL_test = 'https://noteshare-app.herokuapp.com'
-const URL_ = 'http://localhost:8000'
+const URL_ = 'https://noteshare-app.herokuapp.com'
+const URL_test = 'http://localhost:8000'
 /*
     user FUNCTION
     GET reqest to api, to get note id 
@@ -35,7 +35,7 @@ export const createPost = newPost => {
     axios.defaults.withCredentials = true
     let URL =  URL_ + '/post/new'
     return axios
-    .post(URL, newPost)
+      .post(URL, newPost)
 }
 
 /*
@@ -53,7 +53,6 @@ export const getAllPostComments = postId => {
 */
 export const postCommment = (newComment) => {
     axios.defaults.withCredentials = true
-
     return axios  
     .post('http://localhost:8000/comment/new/', newComment)
 }

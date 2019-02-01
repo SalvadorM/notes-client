@@ -14,7 +14,7 @@ class SearchResults extends Component{
 
         if(usernames.length !== 0) {
             userResults = usernames.map(user => {
-                return <UserView key={user.id} user={user}/>
+                return <UserView key={user.id} user={user} />
             })
 
             return(<div className="container text-center pt-4">{userResults}</div>)
