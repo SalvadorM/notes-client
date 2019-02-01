@@ -6,6 +6,8 @@ const URL_test= 'http://localhost:8000'
     Post reqest to api, to login in and user authentication 
 */
 export const userLogin = user => {
+    axios.defaults.withCredentials = true
+
     const userSchema = {
         username: user.username,
         password: user.password
@@ -19,6 +21,7 @@ export const userLogin = user => {
     Post reqest to api, to log out user and end user session
 */
 export const userLogout = () => {
+    axios.defaults.withCredentials = true
     let URL =  URL_ + '/user/logout'
     return axios
         .post(URL)
