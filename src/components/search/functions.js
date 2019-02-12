@@ -1,5 +1,5 @@
 import axios from 'axios'
-const URL_ = 'https://noteshare-app.herokuapp.com'
+const URL_= 'https://noteshare-app.herokuapp.com'
 const URL_test = 'http://localhost:8000'
 
 export const searchPost = (path, keywords)  => {

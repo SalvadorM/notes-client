@@ -10,8 +10,8 @@ class CommentForm extends Component {
         
         this.state = {
             body: '',
-            inputValue: ''
-          }
+            inputValue: '',
+        }
     }
 
     onChange(e){
@@ -40,27 +40,19 @@ class CommentForm extends Component {
             .catch(err => console.log(err))
 
     }
-
-
     render(){
-
-        return(<div>
-                  <div className="w-50 mt-4">
-                <form onSubmit={(e) => this.onSubmit(e)}>
-            
-               
-                    <input className="form-control"
+        const {inputValue} = this.state
+        return(<div className="">
+                <div className="mt-4">
+                <div className="row">  
+                    <div className="col-12"> 
+                    <input className="form-control comment-box"
                            onChange = { (e) => this.onChange(e)}
-                           value={this.state.inputValue}
-                           required></input>
-               
+                           value={inputValue}
+                           required></input></div>
+                    <div className="col-12 text-center"><button className="btn btn-primary" type="submit" onClick={(e) => this.onSubmit(e)}>Comment</button></div>
         
-                    <button className="btn btn-primary"
-                            type="submit">Comment
-                    </button>
-               
-                
-                </form>
+                </div>
                 </div>
 
         </div>)

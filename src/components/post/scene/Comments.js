@@ -26,9 +26,15 @@ class Comments extends Component {
     }
 
     async componentDidMount(){
-        const postId = this.props.postId
-        const comments = await getAllPostComments(postId)
-        this.setState({comments: comments.data})
+        try{
+            const postId = this.props.postId
+            const comments = await getAllPostComments(postId)
+            this.setState({comments: comments.data})
+        }
+        catch(err) {
+            console.log(err)
+            throw(err)
+        }
     }
 
     render(){
@@ -36,7 +42,7 @@ class Comments extends Component {
         const postId = this.props.postId
         const {comments} = this.state
         return(
-        <div className="container py-5 middle">
+        <div className="container py-5 ">
             <div><CommentForm postId={postId} action={this.newComment} /></div>
             <div><PostComments postId={postId} comments={comments} /></div>
         </div>)

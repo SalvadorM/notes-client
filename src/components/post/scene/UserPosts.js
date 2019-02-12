@@ -36,7 +36,7 @@ class UserPosts extends Component{
         let {name, id, cbResponce} = this.state
         if(cbResponce){
             return(
-                <div className="page">
+                <div className="userpost">
                  <div className="container text-center"> 
                     <h1 className="py-3">hello {name}</h1>
                     <p>Below are all your notes, you submitted</p>

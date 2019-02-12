@@ -7,7 +7,7 @@ class PostComments extends Component {
     render(){
 
         const comments = this.props.comments
-        let AllComments = <h2>No Comments</h2>
+        let AllComments = <p>No Comments</p>
         
         if(comments.length !== 0) {
             AllComments = comments.map(comment => {
@@ -16,7 +16,7 @@ class PostComments extends Component {
     
         }
         return(
-            <div>
+            <div className="container text-center">
                 {AllComments} 
             </div>
         )

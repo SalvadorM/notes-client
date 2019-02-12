@@ -4,6 +4,7 @@ import Loading from '../form/loading'
 import {getPostById, getUserById} from '../functions'
 import RenderPost from '../form/postRender'
 import Comments from './Comments'
+import UserCard from '../form/userCard';
 
 class Post extends Component{
 
@@ -11,27 +12,27 @@ class Post extends Component{
         super(props)
         this.state = {
             post: [],
-            username: '',
+            userInfo: '',
             cbResponce: false,
         }
     }
 
     async componentDidMount(){
-     
+        
         try{
             const postId = this.props.match.params.id
             const post = await getPostById(postId)
             const userInfo = await getUserById(post.data.userId)
-
             this.setState({
                 post: post.data,
-                username: userInfo.data.username,
+                userInfo: userInfo.data,
                 cbResponce: true
             })
     
         }
         catch(err) {
             console.log(err)
+            throw err
         }
 
 
@@ -39,12 +40,13 @@ class Post extends Component{
     }
 
     render(){
-        let {post, cbResponce, username} = this.state
+        let {post, cbResponce, userInfo} = this.state
         
         if(cbResponce){
             return(
             <div>
-                <RenderPost post={post} username={username}/>
+                <UserCard userInfo={userInfo} />
+                <RenderPost post={post} userInfo={userInfo}/>
                 <Comments postId={post.id} />
             </div>)
         }

@@ -50,7 +50,7 @@ class Search extends Component{
         if(loading){
             return <Loading type="bubbles" color="#000000"/>
         }
-        return(<div>
+        return(<div className="searchpage">
             <SearchBar action={this.newSearch} />
             <SearchResults results={results} usernames={usernames}/>
             </div>)
