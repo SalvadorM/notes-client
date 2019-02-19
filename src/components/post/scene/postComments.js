@@ -16,7 +16,8 @@ class PostComments extends Component {
     
         }
         return(
-            <div className="container text-center">
+            <div className="container text-center mt-4">
+                <h2 id="comment-h2">Comments</h2>
                 {AllComments} 
             </div>
         )

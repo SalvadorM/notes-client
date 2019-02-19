@@ -15,7 +15,6 @@ class CommentView extends Component {
 
     componentDidMount(){
         const userId = this.props.comment.userId
-        console.log(userId)
         getUserById(userId)
             .then(user =>{
                 this.setState({
@@ -31,7 +30,6 @@ class CommentView extends Component {
         let comment = this.props.comment
 
         if(cbResponce){
-            console.log(userInfo)
             return(
                 <UserComment user={userInfo} comment={comment}/>
             )

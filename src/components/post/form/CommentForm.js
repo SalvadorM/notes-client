@@ -50,7 +50,7 @@ class CommentForm extends Component {
                            onChange = { (e) => this.onChange(e)}
                            value={inputValue}
                            required></input></div>
-                    <div className="col-12 text-center"><button className="btn btn-primary" type="submit" onClick={(e) => this.onSubmit(e)}>Comment</button></div>
+                    <div className="col-12 text-center"><button className="btn btn-primary mt-2" type="submit" onClick={(e) => this.onSubmit(e)}>Comment</button></div>
         
                 </div>
                 </div>

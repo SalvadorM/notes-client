@@ -45,7 +45,7 @@ class Post extends Component{
         if(cbResponce){
             return(
             <div>
-                <UserCard userInfo={userInfo} />
+                <UserCard userInfo={userInfo} createdAt={post.createdAt}/>
                 <RenderPost post={post} userInfo={userInfo}/>
                 <Comments postId={post.id} />
             </div>)

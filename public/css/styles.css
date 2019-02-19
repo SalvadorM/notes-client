@@ -92,10 +92,25 @@ body {
     border-bottom: 1px solid black;
 }
 .comment-box {
-    transition: all 300ms ease-out;
+   width:80%;
+   margin:auto;
+}
+.comment-date {
+    float: left;
+    font-size: xx-small;
+    opacity: 0;
+    transition: all 300ms ease-in;
+}
+
+.user-link:hover ~ .comment-date{
+    opacity: 1;
 }
 
 /* Note */
+.post-date {
+    font-size: xx-small;
+    padding-left: 1rem;
+}
 .note-container {
     width: 100%;
     background-color: rgba(238,238,238,0.5);
@@ -117,5 +132,6 @@ body {
 }
 .search-link:hover {
     font-size: larger;
+    color: black;
     border-bottom: 1px black solid;
 }
