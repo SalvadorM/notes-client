@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Redirect} from 'react-router'
 import {Link} from 'react-router-dom'
-
+import ReactLoading from 'react-loading'
 const Auth = require('../../../utilities/auth')
 
 //error function 
@@ -19,6 +19,7 @@ class LoginForm extends Component{
 
         this.state = {
             error: '',
+            loading: false,
             cbResponce: false,
             user: {
                 username: '',
@@ -37,6 +38,7 @@ class LoginForm extends Component{
 
     onSubmit(e) {
         e.preventDefault()
+        this.setState({loading: true})
 
         let username = this.state.user.username
         let password = this.state.user.password
@@ -44,18 +46,21 @@ class LoginForm extends Component{
         Auth.authenticate(username, password, () => {
             //cb function
             if(Auth.getlocalstorage('error') === 'true'){
-                this.setState({error: 'Incorrect password or username'})
+                this.setState({error: 'Incorrect password or username', loading: false})
             } else{
                 //there was no errors 
                 //route to user hub
-                this.setState({cbResponce: !this.state.cbResponce})
+                this.setState({cbResponce: !this.state.cbResponce, loading: false})
             }
         })
     }
 
     render() {
-        const {cbResponce, error} = this.state
+        const {cbResponce, error, loading} = this.state
         let errorMessage
+        let signInBtn = <button type="submit" className="btn btn-outline-primary mt-2">Sign In</button>
+        if(loading) signInBtn = <button type="submit" className="btn btn-outline-primary mt-2"><ReactLoading width={'2em'} height={'1.5em'} color={'black'} className={'loading'}/></button>
+
         if(error) {
             errorMessage =  <Error message={error} />
         } else {
@@ -89,7 +94,7 @@ class LoginForm extends Component{
                             onChange = { (e) => this.onChange(e)}>
                     </input>
                     </div>
-                    <button type="submit" className="btn btn-outline-primary mt-2">Sign In</button>
+                    {signInBtn}
                     </form>
                 </div>
 
