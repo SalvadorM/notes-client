@@ -10,11 +10,10 @@ class Header extends Component{
         <nav className="container">   
             <span className="branding navbar-brand"> CAUSEnotes </span>
             <div className="nav">
-                <Link className="nav-item mr-2 py-1" to="/" > Home</Link>
-                <Link className="nav-item mr-2 py-1" to="/user"> User</Link>
-                <Link className="nav-item mr-2 py-1" to="/notes"> Notes</Link>
+                <Link className="nav-item mr-2 py-1" to="/" >Home</Link>
+                <Link className="nav-item mr-2 py-1" to="/user">User</Link>
+                <Link className="nav-item mr-2 py-1" to="/notes">Notes</Link>
                 <Signout />
-                {/* <Link className="nav-item" to="/search"> Search</Link> */}
             </div>
         </nav> 
 

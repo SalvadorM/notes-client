@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 
 const NoteButton = () => {
-    return(<Link to="/post/new">Post a note</Link>)
+    return(<Link className="btn btn-info" to="/post/new">Post a note</Link>)
 }
 
 export default NoteButton
